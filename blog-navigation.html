@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Blog - MIT Arcuturus</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="Pictures/favicon.png" rel="icon">
+  <link href="Pictures/favicon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Sailor - v4.7.0
+  * Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+   <!-- ======= Header ======= -->
+   <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <!-- <h1 class="logo me-auto"><a href="index.html">Arcturus</a></h1> -->
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="index.html" class="logo me-auto"><img src="Pictures/arcturus-logo-crp.png" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+
+
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="team.html">Team Members</a></li>
+          <li class="dropdown"><a href="#"><span>Blogs</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="blog-navigation.html">Navigations</a></li>
+              <li><a href="blog-hullectronics.html">Hullectronics</a></li>
+              <li><a href="blog-taskforce.html">Task Force</a></li>
+
+            </ul>
+          </li>
+          <li><a href="contact.html">Sponsors</a></li>
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Blog</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Blog</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <h1 class="title">
+          Navigation Team's Blog
+        </h1>
+
+        <div class="row">
+
+          <div class="col-lg entries">
+
+            <!-- START BLOG ENTRY HERE -->
+            <article class="entry">
+
+              <div class="entry-img">
+                <img src="Pictures/Blogs/navigation_11.png" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                <a>Bouy Detection</a>
+              </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center">
+                    <i class="bi bi-clock"></i> 
+                    <a>
+                      <time datetime="2020-01-01">January 29, 2022</time>
+                    </a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content">
+              <p>
+                One of the first tasks our team worked on was buoy detection. Most of the navigation courses in Roboboat require us to 
+                identify buoys and then figure out how to navigate them. Using a ZED camera, we developed the following algorithmic steps 
+                to properly identify buoys on the course:
+              </p>
+              <p>Performs erosion with a segmentation kernel</p>
+              <p>Performs dilation with the same segementation kernel</p>
+              <p>Converts the image to HSV </p>
+              <p>Gets the mask for each color range we are looking at(red, green, yellow)</p> 
+              <p>Generates a bounding box for each disjoint blob in the color range mask</p>
+
+
+            </article> 
+            <!-- END BLOG ENTRY -->
+
+            <!-- START BLOG ENTRY HERE -->
+            <article class="entry">
+
+              <div class="entry-img">
+                <img src="Pictures/Blogs/navigation_1.png" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                <a >Path Planning</a>
+              </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center">
+                    <i class="bi bi-clock"></i> 
+                    <a>
+                      <time datetime="2020-01-01">March 18, 2022</time>
+                    </a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content">
+                <p>
+                  Our controller is a Pixhawk 4 running Ardupilot. It takes in GPS waypoint coordinates 
+                  and headings and handles the motor commands to achieve the desired position and heading. 
+                  For the two main navigation tasks, we plan to first identify them and head to the position 
+                  shown in each of the above figures on the left. Then, we will run through pre-planned paths 
+                  that are adjusted in realtime by a local planner for obstacle avoidance. The preplanned paths 
+                  are shown visualized in RVIZ in the above figures on the right.
+                </p>
+
+            </article> 
+            <!-- END BLOG ENTRY -->
+
+
+          </div><!-- End blog entries list -->
+
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>Arcturus</h3>
+              <p>
+                <strong>Email:</strong> arcturus-exec@mit.edu<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="https://www.instagram.com/mit.arcturus/" class="instagram"><i class="bx bxl-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="team.html">Team Members</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Sponsors</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>The Competition</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://robonation.org/">Robonation</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://roboboat.org/">Roboboat 2022</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Sailor</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/sailor-free-bootstrap-theme/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
