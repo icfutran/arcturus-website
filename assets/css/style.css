@@ -562,6 +562,11 @@ section {
 .about .content p:last-child {
   margin-bottom: 0;
 }
+.about .video{
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+}
 
 /*--------------------------------------------------------------
 # Clients
